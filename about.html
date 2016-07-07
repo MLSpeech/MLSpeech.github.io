@@ -100,15 +100,14 @@
                     </li>
                     <li class=""><a href="#service-three" data-toggle="tab">Voice Onset Time</a>
                     </li>
-                    <li class=""><a href="#service-four" data-toggle="tab">Formants Estimation &amp; Tracking</a>
+                    <li class=""><a href="#service-four" data-toggle="tab">Formant Estimation &amp; Tracking</a>
                     </li>
                 </ul>
 
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="service-one">
                         <h4>Word Duration</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                        <p>DeepWDM generates automatic measurements of word durations. Input to the system is a sound file of an arbitrary length with a single word. The system outputs a textgrid with the duration of the word. The tool has three RNN models available for use for this taks. The trained model does not require phonetic or orthographic transcription o the words as input. </p>
                        <br><br>
                             
                         <center><figure>
@@ -118,7 +117,7 @@
                     </div>
                     <div class="tab-pane fade" id="service-two">
                         <h4>AutoVowelDuration</h4>
-                        <p>AutoVowelDuration generates automatic measurements of voweldurations. The system takes as input an arbitrary length segment of the acoustic signal containing a single vowel that is preceded and followed by consonants, and outputs the duration of the vowel. A DNN-based algorithm (Adi et al., 2015) and structured prediction-based algorithm (Adi et al., 2016) were designed for this task. Critically, the trained model can automatically estimate vowel durations without phonetic or orthographic transcription.</p><br>
+                        <p>AutoVowelDuration generates automatic measurements of vowel durations. The system takes as input an arbitrary length segment of an acoustic signal containing a single vowel that is preceded and followed by consonants, and outputs the duration of the vowel. A DNN-based algorithm (Adi et al., 2015) and structured prediction-based algorithm (Adi et al., 2016) were designed for this task. Critically, the trained model can automatically estimate vowel durations without phonetic or orthographic transcription.</p><br>
                         <p>The vowel duration annotator has been compared to the current state-of-the-art alignment system for segment-level annotation: the FAVE forced aligner (Rosenfelder et al. 2011), based on the Penn Phonetics Lab Forced Aligner (Yuan &amp; Liberman, 2008). Our automatic annotation system performs at a high degree of accuracy: it matches the vowel boundaries selected by manual annotation, resulting in a closer match to these manual annotations than the FAVE aligner; and recovers the same parameters of a statistical model based on manual measurements (Adi et al., 2015; Adi et al., 2016).</p>
                         
                         <small>
@@ -154,7 +153,7 @@
                     </div>
                     <div class="tab-pane fade" id="service-four">
                         <h4>DeepFormants</h4>
-                        <p>Formant frequency estimation and tracking are among the most fundamental problems in speech processing. Speech analyses require the accurate estimation of formants from a stationary point in time (e.g. the midpoint of a vowel), as well as dynamic tracking of frequencies across a signal. Traditionally, formant estimation and tracking is done using ad-hoc signal processing methods. DeepFormants (Dissen &amp; Keshet, 2016) is based on machine learning techniques trained on an annotated corpus of read speech for these tasks (Deng et al., 2006). Our acoustic signal representation is composed of LPC-based cepstral coefficients with a range of model orders (number of LPC poles) and pitch-synchronous cepstral coefficients. Two deep network architectures are used as learning algorithms: a deep feed-forward network for the estimation task and a recurrent neural network for the tracking task. The performance of our methods compares favorably with mainstream LPC-based implementations and state-of-the-art tracking algorithms. Preliminary results suggest that, like existing systems such as DARLA and FAVE (Reddy &amp; Stanford, 2015), our system can capture dialect-level differences in the tense-lax distinction of front vowels that differ between speakers of Northern and Southern varieties of American English.</p><br>
+                        <p>Formant frequency estimation and tracking are among the most fundamental problems in speech processing. Speech analyses require the accurate estimation of formants from a stationary point in time (e.g. the midpoint of a vowel), as well as dynamic tracking of frequencies across a signal. Traditionally, formant estimation and tracking is done using ad-hoc signal processing methods. DeepFormants (Dissen &amp; Keshet, 2016) is based on machine learning techniques trained on an annotated corpus of read speech (Deng et al., 2006). Our acoustic signal representation is composed of LPC-based cepstral coefficients with a range of model orders (number of LPC poles) and pitch-synchronous cepstral coefficients. Two deep network architectures are used as learning algorithms: a deep feed-forward network for the estimation task and a recurrent neural network for the tracking task. The performance of our methods compares favorably with mainstream LPC-based implementations and state-of-the-art tracking algorithms. Preliminary results suggest that, like existing systems such as DARLA and FAVE (Reddy &amp; Stanford, 2015), our system can capture dialect-level differences in the tense-lax distinction of front vowels that differ between speakers of Northern and Southern varieties of American English.</p><br>
 
                         
                         <center><table class="w3-table-all" style="width:40%" border=1 frame=void rules=rows>
