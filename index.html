@@ -1,201 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+notitle: true
 
-<head>
+# groups of columns of {roles: list, width: num, image: bool}
+role-tables:
+- - roles: [faculty]
+    width: 4
+    image: true
+  - roles: [phd]
+    width: 4
+    image: true
+  - roles: [msc, alum]
+    width: 4
+    image: true
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+---
 
-    <title>{Deep} Phonetic Tools</title>
+<div class="jumbotron">
+    <p>
+        The <b>MLSpeech group</b> at <b>Bar-Ilan University</b> does all sorts of
+        research. Here is a place where we tell you exactly what that is!
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        The research in the lab is focused on statistical and machine learning techniques applied to the modeling and processing of speech and language. A typical problem in speech and language processing has a very large number of training examples, is sequential, highly structured, and has a unique measure of performance. The lab's goal is to develop rigorous statistical and machine learning algorithms that maximize performance by matching the internal structure of the problem and by optimizing its unique measure of performance.
+    </p>
+</div>
 
-    <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+<section>
+    <h2>News</h2>
+    <ul class="news list-unstyled">
+        {% for post in site.posts limit: site.front_page_news %}
+            {% include news-item.html item=post %}
+        {% endfor %}
+    </ul>
+    {% assign numposts = site.posts | size %}
+    {% if numposts >= 1 %}
+        <p>
+            <span class="fa fa-fw fa-history"></span>
+            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+        </p>
+    {% endif %}
+</section>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">{Deep} Phonetic Tools</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="get_started.html">Get Started</a>
-                    </li>
-                    <li>
-                        <a href="faq.html">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="tutorial.html">Tutorial</a>
-                    </li>
-                    <li>
-                        <a href="who_we_are.html">Who We Are</a>
-                    </li>
-                    <li>
-                        <a href="github.html">GitHub</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text={Deep} Phonetic Tools');"></div> -->
-                <div class="fill" style="background-image:url('https://placeholdit.imgix.net/~text?txtsize=200&txt={Deep} Phonetic Tools&w=1900&h=600');"></div>
-                <div class="carousel-caption">
-                    <h2>State-of-the-art accurate phonetic tools based on machine-learning</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-<!--         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
- -->    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Marketing Icons Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">
-                    Why Deep Phonetic Tools?
-                </h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> State-of-the-art</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Our tools are highly accurate, give reliable results that match or outperform the current state-of-the-art systems, and are quantitatively similar to results from human annotators. They developed over more than five years of collaboration between linguistic rand computer science researchers.</p>
-                        <!-- <a href="#" class="btn btn-default">Learn More</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>All tools are free to use, released under the MIT license, and available at our lab's repository. You can use them in your own research, or can change and develop them.<br><br><br></p>
-                        <!-- <a href="#" class="btn btn-default">Learn More</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Researchers can use these tools in two different ways. Each tool is integrated with Praat as a plugin, allowing straighforward single-file processing in a graphical interface. In addition, all tools have an easy command line interface for batch processing large numbers of files. </p>
-                        <!-- <a href="#" class="btn btn-default">Learn More</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">What are Deep Phonetic Tools?</h2>
-            </div>
-            <div class="col-md-12">
-                <p>Automation of phonetic measurement is an integral part of working with large datasets in Laboratory Phonology. A challenge for such systems is to match the reliability of human annotators. We introduce four systems for reliable, automatic measurement of phonetic features that are often of interest to speech production researchers: word duration, vowel duration, voice onset time, and formant estimation and tracking</p>
-                <p>The systems are designed to work with variable length inputs and do not need to be synchronized with the onset or offset of the phonetic interval of interest. The signal processing and the acoustic signal representation were tailored for each task individually, allowing the systems to exhibit the degree of precision and reliability needed to support research in Laboratory Phonology. To create systems that would produce reliable output, we used state-of- the-art deep neural networks (DNN) models and the trained them on corpora that were manually annotated at Northwestern University and Ohio State University. All tools are currently available for Mac or Linux, and soon will be available for Windows.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>Our GitHub repository gives you access to our tools and information on setup and use.</p>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="https://github.com/MLSpeech">Access tools here</a>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy;{Deep} Phonetic Tools 2016</p>
-                </div>
-            </div>
-        </footer>
-
+<section>
+    <h2>Research</h2>
+    <div class="card-columns">
+        {% comment %}
+        Sort the projects by date, putting those without dates last
+        {% endcomment %}
+        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
+        {% assign projects_by_date = projects_by_date | reverse %}
+        {% for p in projects_by_date %}
+            {% if p.status != "inactive" %}
+                {% include project-card.html project=p %}
+            {% endif %}
+        {% endfor %}
     </div>
-    <!-- /.container -->
+</section>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
-</body>
-
-</html>
+<div id="people">
+    <h2>People</h2>
+    {% for role-table in page.role-tables %}
+        <section class="people row justify-content-between">
+            {% for role-column in role-table %}
+                <div class="col-md-{{ role-column.width }}">
+                    {% for role in role-column.roles %}
+                        {% include role-people.html role=role image=role-column.image %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>

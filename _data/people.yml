@@ -1,0 +1,65 @@
+jkeshet:
+    display_name: "Joseph Keshet"
+    role: faculty
+    bio: Professor
+    image: /img/people/joseph_keshet.jpg
+
+fkreuk:
+    display_name: "Felix Kreuk"
+    role: phd
+    bio: Speech Generation
+    image: /img/people/felix_kreuk.png
+
+jshrem:
+    display_name: "Joseph Shrem"
+    role: phd
+    bio: Speech Segmentation
+    image: /img/people/yosi_shrem.jpg
+
+tfuchs:
+    display_name: "Fuchs Tzviya"
+    role: phd
+    bio: Speech Segmentation
+    image: /img/people/tzeviya_fuchs.jpg
+
+ysegal:
+    display_name: "Yael Segal"
+    role: phd
+    bio: Speech Segmentation
+    image: /img/people/yael_segal.jpg
+
+tfenster:
+    display_name: "Tamar Fenster"
+    role: msc
+    bio: XXX
+    image: /img/people/tamar_fenster.jpg
+
+glev:
+    display_name: "Gal Lev"
+    role: msc
+    bio: XXX
+    image: /img/people/gal_lev.jpg
+
+gshalev:
+    display_name: "Gavi Shalev"
+    role: phd
+    bio: XXX
+    image: /img/people/gabi_shalev.jpg
+
+rchern:
+    display_name: "Roni Chern"
+    role: msc
+    bio: Robustness
+    image: /img/people/roni_cherniak.jpg
+
+tbensimon:
+    display_name: "Talia Ben-Simon"
+    role: msc
+    bio: Speech Generation
+    image: /img/people/talia_bensimon.jpg
+
+adiyoss:
+    display_name: "Yossi Adi"
+    role: alum
+    image: /img/people/yossi_adi.jpg
+
