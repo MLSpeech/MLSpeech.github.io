@@ -9,6 +9,8 @@ fkreuk:
     role: phd
     bio: Speech Generation
     image: /img/people/felix_kreuk.png
+    webpage: "https://felixkreuk.github.io"
+    github: felixkreuk
 
 jshrem:
     display_name: "Joseph Shrem"
